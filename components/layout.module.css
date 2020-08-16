@@ -8,6 +8,7 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .headerImage {
@@ -24,4 +25,8 @@
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+.toggler {
+  margin-bottom: auto;
 }

@@ -1,6 +1,7 @@
 ---
 title: "Angular Functions in Templates"
 date: "2020-06-30"
+imageUrl: './images/undraw_code_review_l1q9.svg'
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.

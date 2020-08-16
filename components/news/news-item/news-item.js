@@ -11,16 +11,16 @@ import Link from "next/link";
 import Date from "../../date";
 import newsItemStyle from "./news-item.module.css";
 
-export const NewsItem = ({ title = "News 1", exceprt = "", date, id }) => {
+export const NewsItem = ({ title = "News 1", exceprt = "", date, imageUrl, id, className }) => {
   return (
-    <Card style={{ width: "21rem" }}>
+    <Card className={`mdc-elevation--z4 ${className}`}>
       <CardPrimaryAction>
         <Link href="/posts/[id]" as={`/posts/${id}`}>
           <a className={newsItemStyle.ImageWrapper}>
             <CardMedia
               sixteenByNine
               style={{
-                backgroundImage: "url(./images/news.jpg)",
+                backgroundImage: `url(${imageUrl ? imageUrl : './images/news.jpg'})`,
               }}
             />
           </a>

@@ -1,13 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;600&display=swap");
+
+:root {
+  --mdc-theme-primary: #1976d2;
+  --mdc-theme-secondary: #d81b60;
+}
+
+:root.is-dark {
+  --mdc-theme-primary: #1e88e5;
+  --mdc-theme-secondary: #3b3c3d;
+
+  --mdc-theme-background: #2c2c2c; 
+  --mdc-theme-surface:  #2c2c2c;
+  --mdc-theme-error: #b00020;
+  --mdc-theme-on-primary:  #2c2c2c;
+  --mdc-theme-on-secondary: #2c2c2c;
+  --mdc-theme-on-surface: #fff;
+  --mdc-theme-on-error: #fff;
+  --mdc-theme-text-primary-on-background: #fff;
+  --mdc-theme-text-secondary-on-background: #fff;
+  --mdc-theme-text-hint-on-background: #fff;
+  --mdc-theme-text-disabled-on-background: #fff;
+  --mdc-theme-text-icon-on-background: #fff;
+  --mdc-theme-text-primary-on-light: #fff;
+  --mdc-theme-text-secondary-on-light:#fff;
+  --mdc-theme-text-hint-on-light: #fff;
+  --mdc-theme-text-disabled-on-light: #fff;
+  --mdc-theme-text-icon-on-light: #fff;
+  --mdc-theme-text-primary-on-dark: white;
+  --mdc-theme-text-secondary-on-dark: rgba(255, 255, 255, 0.7);
+  --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Recursive', Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Recursive", Arial, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
   line-height: 1.6;
   font-size: 16px;
+  background-color: var(--mdc-theme-background);
+  color: var(--mdc-theme-text-primary-on-background);
+
+  transition: color ease-in-out .3s, background-color ease-in-out .3s;
 }
 
 * {
@@ -15,8 +53,9 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: var(--mdc-theme-primary);
   text-decoration: none;
+  outline: none;
 }
 
 a:hover {
