@@ -1,0 +1,22 @@
+.heading {
+  min-height: 64px;
+}
+
+.heading:hover {
+    text-decoration: underline;
+}
+
+.body {
+  text-decoration: none;
+}
+
+.body:hover {
+  text-decoration: none;
+}
+
+
+
+.ImageWrapper {
+  display: flex;
+  flex-direction: column;
+}

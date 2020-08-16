@@ -1,5 +1,5 @@
 .heading2Xl {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.05rem;
@@ -37,10 +37,17 @@
   padding-top: 1px;
 }
 
-.list {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5rem;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+}
+
+.gridItem {
+
 }
 
 .listItem {
@@ -49,4 +56,11 @@
 
 .lightText {
   color: #666;
+}
+
+.headerDescription {
+  max-width: 30rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
 }

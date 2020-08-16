@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "next:start": "next start",
+    "next:run": "next build && next start",
+    "start": "next dev"
   },
   "dependencies": {
     "date-fns": "^2.11.1",
@@ -14,6 +16,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark": "^12.0.0",
-    "remark-html": "^11.0.1"
+    "remark-html": "^11.0.1",
+    "rmwc": "^6.1.3"
   }
 }
