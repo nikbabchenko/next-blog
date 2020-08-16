@@ -3,6 +3,13 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
+import ReactMarkdown from "react-markdown/with-html";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+
+
+const CodeBlock = ({ language, value }) => {
+  return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
+};
 
 export default function Post({ postData }) {
   return (
@@ -15,7 +22,7 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <ReactMarkdown  renderers={{ code: CodeBlock }} escapeHtml={false} source={postData.contentHtml} />
       </article>
     </Layout>
   )

@@ -70,3 +70,7 @@ img {
 .mdc-card__actions {
   margin-top: auto;
 }
+
+.mdc-card__primary-action {
+  flex: 1;
+}

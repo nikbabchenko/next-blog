@@ -4,6 +4,15 @@ date: "2020-08-16"
 imageUrl: './images/welcome.jpg'
 ---
 
+```jsx
+
+import React from "react";
+
+const CoolComponent = () => <div>I'm a cool component!!</div>;
+
+export default CoolComponent;
+```
+
 We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
 
 You can use Static Generation for many types of pages, including:

@@ -8,6 +8,7 @@
 
 .body {
   text-decoration: none;
+  flex: 1 1 auto;
 }
 
 .body:hover {
