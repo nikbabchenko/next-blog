@@ -7,10 +7,10 @@
 
 :root.is-dark {
   --mdc-theme-primary: #1e88e5;
-  --mdc-theme-secondary: #3b3c3d;
+  --mdc-theme-secondary: rgb(59, 60, 61);
 
-  --mdc-theme-background: #2c2c2c; 
-  --mdc-theme-surface:  #2c2c2c;
+  --mdc-theme-background: #0e0e0e; 
+  --mdc-theme-surface: #1c1a29;
   --mdc-theme-error: #b00020;
   --mdc-theme-on-primary:  #2c2c2c;
   --mdc-theme-on-secondary: #2c2c2c;
@@ -65,4 +65,8 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+.mdc-card__actions {
+  margin-top: auto;
 }

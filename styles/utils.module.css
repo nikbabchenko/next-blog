@@ -3,7 +3,7 @@
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.05rem;
-  margin: 1rem 0;
+  margin: 1rem 0 0;
 }
 
 .headingXl {
@@ -69,12 +69,12 @@
 
 
 .lightText {
-  color: #666;
+  color: var(--mdc-theme-text-hint-on-light);
 }
 
 .headerDescription {
   max-width: 30rem;
   font-size: 1.2rem;
   font-weight: 300;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
