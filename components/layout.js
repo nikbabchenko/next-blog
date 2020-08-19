@@ -3,13 +3,14 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import DarkModeToggler from "./dark-mode-toggler";
+import {Button} from "@rmwc/button";
 
 const name = "Nick Babchenko";
 export const siteTitle = `Web dev's blog`;
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container}`}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Web developer's blog" />
@@ -55,14 +56,16 @@ export default function Layout({ children, home }) {
           <DarkModeToggler />
         </aside>
       </header>
-      <main>{children}</main>
+      <main className={`${utilStyles.bodyText} ${!home ? styles.postContent : ''}`}>{children}
+      
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <Button raised>← Back to home</Button>
           </Link>
         </div>
       )}
+      </main>
     </div>
   );
 }

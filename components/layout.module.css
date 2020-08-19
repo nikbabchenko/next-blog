@@ -1,9 +1,16 @@
 .container {
-  max-width: 87.5rem;
+  max-width: 80rem;
   width: 100%;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
 }
+
+.postContent {
+  max-width: 56.25rem;
+  margin: 2rem auto;
+  width: 100%;
+}
+
 
 .header {
   display: flex;

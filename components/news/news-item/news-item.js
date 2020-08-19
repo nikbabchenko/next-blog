@@ -54,7 +54,7 @@ export const NewsItem = ({ title = "News 1", exceprt = "", date, imageUrl, id, c
       <CardActions>
         <CardActionButtons>
           <Link href="/posts/[id]" as={`/posts/${id}`}>
-            <CardActionButton>Read</CardActionButton>
+            <CardActionButton raised>Read</CardActionButton>
           </Link>
         </CardActionButtons>
       </CardActions>

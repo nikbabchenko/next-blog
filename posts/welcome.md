@@ -1,29 +1,15 @@
 ---
-title: "What and Why this blog?"
+title: "What is this blog about? Who am I?"
 date: "2020-08-16"
 imageUrl: './images/welcome.jpg'
 ---
 
-```jsx
+My name is Nick Babchenko and I'm Javascript Engineer for *more than 6 years* now. 
 
-import React from "react";
+Most of the time I was working on enterprise projects with very different frontend stack, based on Angular, Vue.js, React.js even such kind of technologies like Stencil.js or Preact.js. 
 
-const CoolComponent = () => <div>I'm a cool component!!</div>;
+I was working with different hybrid frameworks like, 
+React Native, Electron, Flutter, Ionic etc.
 
-export default CoolComponent;
-```
-
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
-
-You can use Static Generation for many types of pages, including:
-
-- Marketing pages
-- Blog posts
-- E-commerce product listings
-- Help and documentation
-
-You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
-
-On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
-
-In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
+So, with this zoo in mind, the closest relationships I have with Angular. 
+I've started to learn it from the most heroic framework -  Angular.JS (1.x), and then learned it from scratch since Angular 4.0. 
