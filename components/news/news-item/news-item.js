@@ -51,13 +51,6 @@ export const NewsItem = ({ title = "News 1", exceprt = "", date, imageUrl, id, c
           </a>
         </Link>
       </CardPrimaryAction>
-      <CardActions>
-        <CardActionButtons>
-          <Link href="/posts/[id]" as={`/posts/${id}`}>
-            <CardActionButton raised>Read</CardActionButton>
-          </Link>
-        </CardActionButtons>
-      </CardActions>
     </Card>
   );
 };
