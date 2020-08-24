@@ -2,7 +2,7 @@
   max-width: 80rem;
   width: 100%;
   padding: 0 1rem;
-  margin: 3rem auto 6rem;
+  margin: 0 auto 6rem;
 }
 
 .postContent {
@@ -14,8 +14,13 @@
 
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  padding-top: 1rem;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 .headerImage {
@@ -36,4 +41,12 @@
 
 .toggler {
   margin-bottom: auto;
+}
+
+.profileInnerImage {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--mdc-theme-text-primary-on-background);
 }

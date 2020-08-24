@@ -1,12 +1,13 @@
 import Head from "next/head";
 import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
+import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
-import DarkModeToggler from "./dark-mode-toggler";
+import DarkModeToggler from "../dark-mode-toggler";
 import {Button} from "@rmwc/button";
 
 const name = "Nick Babchenko";
 export const siteTitle = `Web dev's blog`;
+const formatToInitials = name => name.split(' ').map(item => item[0]).join('');
 
 export default function Layout({ children, home }) {
   return (
@@ -36,25 +37,21 @@ export default function Layout({ children, home }) {
         ) : (
           <div>
             <Link href="/">
-              <a>
+              <a className={styles.profileInnerImage}>
                 <img
                   src="/images/profile.jpg"
                   className={`${styles.headerImage} ${utilStyles.borderCircle}`}
                   alt={name}
                 />
+               <span>{formatToInitials(name)}</span>
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
           </div>
         )}
 
-        <aside className={styles.toggler}>
+        <div className={styles.toggler}>
           <DarkModeToggler />
-        </aside>
+        </div>
       </header>
       <main className={`${utilStyles.bodyText} ${!home ? styles.postContent : ''}`}>{children}
       
