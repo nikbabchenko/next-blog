@@ -53,7 +53,7 @@ export default function Layout({ children, home }) {
           <DarkModeToggler />
         </div>
       </header>
-      <main className={`${utilStyles.bodyText} ${!home ? styles.postContent : ''}`}>{children}
+      <main className={`${!home ? styles.postContent + ' ' + utilStyles.bodyText : ''}`}>{children}
       
       {!home && (
         <div className={styles.backToHome}>
