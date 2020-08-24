@@ -1,17 +1,14 @@
 import {
   Card,
-  CardActionButton,
-  CardActionButtons,
-  CardActions,
   CardMedia,
-  CardPrimaryAction,
+  CardPrimaryAction
 } from "@rmwc/card";
 import { Typography } from "@rmwc/typography";
 import Link from "next/link";
 import Date from "../../date";
 import newsItemStyle from "./news-item.module.css";
 
-export const NewsItem = ({ title = "News 1", exceprt = "", date, imageUrl, id, className }) => {
+export const NewsItem = ({ title = "News 1", excerpt = "", date, imageUrl, id, className }) => {
   return (
     <Card className={`mdc-elevation--z4 ${className}`}>
       <CardPrimaryAction>
@@ -46,7 +43,7 @@ export const NewsItem = ({ title = "News 1", exceprt = "", date, imageUrl, id, c
               <Date dateString={date} />
             </Typography>
             <Typography use="body1" tag="div" theme="textSecondaryOnBackground">
-              {exceprt}
+              {excerpt}
             </Typography>
           </a>
         </Link>

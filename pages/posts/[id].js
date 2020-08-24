@@ -22,7 +22,7 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <ReactMarkdown  renderers={{ code: CodeBlock }} escapeHtml={false} source={postData.contentHtml} />
+        <ReactMarkdown  renderers={{ code: CodeBlock }} escapeHtml={false} source={postData.content} />
       </article>
     </Layout>
   )
