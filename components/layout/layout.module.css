@@ -17,10 +17,10 @@
   align-items: flex-start;
   justify-content: space-between;
   padding-top: 1rem;
-  position: sticky;
-  left: 0;
+  /* position: sticky; */
+  /* left: 0;
   right: 0;
-  top: 0;
+  top: 0; */
 }
 
 .headerImage {

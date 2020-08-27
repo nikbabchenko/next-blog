@@ -13,8 +13,8 @@ export default function Home({ allPostsData }) {
         <p className={utilStyles.headerDescription}>
           Software engineer at{" "}
           <a href="https://www.lohika.com.ua/" target="_blank">
-            Lohika
-          </a>
+            Lohika Altran Group
+          </a> 🐱‍💻
           . Fan of writing readable code. Angular Ninja 🏂. PS gamer. 🎮.
         </p>
       </section>

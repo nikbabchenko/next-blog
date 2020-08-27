@@ -5,11 +5,26 @@ import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import ReactMarkdown from "react-markdown/with-html";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-
+import cn from 'classnames';
 
 const CodeBlock = ({ language, value }) => {
   return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
 };
+
+const imagesClasses = {
+  centered: 'responsive-image--centered',
+  responsive: 'responsive-image'
+}
+
+const Image = (props) => {
+  const {src} = props;
+  const hash = src.split('#')[1];
+
+  return <img {...props} className={cn({
+    'responsive-image': true,
+    [imagesClasses.centered]: hash === 'centered'
+  })} />
+}
 
 export default function Post({ postData }) {
   return (
@@ -22,7 +37,7 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <ReactMarkdown  renderers={{ code: CodeBlock }} escapeHtml={false} source={postData.content} />
+        <ReactMarkdown  renderers={{ code: CodeBlock, image: Image }} escapeHtml={false} source={postData.content} />
       </article>
     </Layout>
   )
