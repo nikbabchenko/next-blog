@@ -7,6 +7,20 @@ export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
+      {/* Global site tag (gtag.js) - Google Analytics  */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177868691-1"></script>
+      <script
+      dangerouslySetInnerHTML={{
+        __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177868691-1');`
+      }}
+      >
+      </script>
+
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
