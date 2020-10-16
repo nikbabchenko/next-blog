@@ -4,11 +4,12 @@ import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import ReactMarkdown from "react-markdown/with-html";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+import {xonokai} from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import cn from 'classnames';
 
 const CodeBlock = ({ language, value }) => {
-  return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
+  return <SyntaxHighlighter style={xonokai} showLineNumbers language={language}>{value}</SyntaxHighlighter>;
 };
 
 const imagesClasses = {
