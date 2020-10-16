@@ -1,6 +1,6 @@
 ---
 title: "How to use Getters and Setters in Angular without negative performance impact?"
-date: "2020-06-30"
+date: "2020-10-16"
 imageUrl: './images/post-1.jpg'
 ---
 
