@@ -2,6 +2,7 @@ import {Layout} from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
+import DisqusComments from '../../components/disqus-comments/disqus-comments'
 import utilStyles from '../../styles/utils.module.css'
 import ReactMarkdown from "react-markdown/with-html";
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
@@ -39,6 +40,7 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
         <ReactMarkdown  renderers={{ code: CodeBlock, image: Image }} escapeHtml={false} source={postData.content} />
+        <DisqusComments post={postData} />
       </article>
     </Layout>
   )
