@@ -4,7 +4,7 @@ date: "2020-11-22"
 imageUrl: './images/skeleton-loader/2.jpeg'
 excerpt: "Happy to propose a new webcomponent for creating skeleton screens."
 ---
-![Skeleton Webcomponent](../images/skeleton-loader/main.jpg#responsive)
+![Skeleton Webcomponent](../images/skeleton-loader/2.jpeg#responsive)
 
 
 As a frontend developer I tend to provide users clear feedback on their actions. 
