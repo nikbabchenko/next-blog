@@ -1,12 +1,16 @@
 import {DiscussionEmbed} from "disqus-react";
 
 export const DisqusComments = ({ post }) => {
-  const disqusShortname = "Nick's tech blog"
+  const disqusShortname = "http-nick-babchenko-tech"
+
+  console.log(post);
+
   const disqusConfig = {
-    url: `https://http-nick-babchenko-tech.disqus.com/${post.title}`,
+    url: `http://nick-babchenko.tech/${post.id}`,
     identifier: post.id, // Single post id
     title: post.title // Single post title
   }
+
   return (
     <div>
       <DiscussionEmbed
