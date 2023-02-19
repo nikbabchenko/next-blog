@@ -1,11 +1,11 @@
 ---
-title: "370 days of war in Ukraine"
+title: "360 days of war in Ukraine"
 date: "2023-02-19"
 imageUrl: "./images/war-in-ukraine/1.jpg"
 excerpt: "Almost a year we live in 24 february 2022, when Russian terrorist came to our home. From that day changed a lot - we have won a lot battles but the main one is still coming..."
 ---
 
-The Ukrainian people have been living in the darkness of war for 370 days now. 
+The Ukrainian people have been living in the darkness of war for 360 days now. 
 Almost a year passed since we have woken up because of the airstrikes all over the country. We didn't believe that it was a first day of the russian invasion of Ukraine until we saw the news. 
 The Mr. President Zelensky showed himself as the real leader of the Ukrainian nation. Every day, even several times a day from the 24 february 2022 we see his report about the current status of the Ukrainian war, what has been done during the day, our achievements and problems. 
 
