@@ -3,11 +3,15 @@ import styles from "./layout.module.css";
 import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 import DarkModeToggler from "../dark-mode-toggler";
-import {Button} from "@rmwc/button";
+import { Button } from "@rmwc/button";
 
 const name = "Nick Babchenko";
 export const siteTitle = `Web dev's blog`;
-const formatToInitials = name => name.split(' ').map(item => item[0]).join('');
+const formatToInitials = (name) =>
+  name
+    .split(" ")
+    .map((item) => item[0])
+    .join("");
 
 export default function Layout({ children, home }) {
   return (
@@ -36,15 +40,13 @@ export default function Layout({ children, home }) {
           </div>
         ) : (
           <div>
-            <Link href="/">
-              <a className={styles.profileInnerImage}>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-               <span>{formatToInitials(name)}</span>
-              </a>
+            <Link className={styles.profileInnerImage} href="/">
+              <img
+                src="/images/profile.jpg"
+                className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                alt={name}
+              />
+              <span>{formatToInitials(name)}</span>
             </Link>
           </div>
         )}
@@ -53,15 +55,20 @@ export default function Layout({ children, home }) {
           <DarkModeToggler />
         </div>
       </header>
-      <main className={`${!home ? styles.postContent + ' ' + utilStyles.bodyText : ''}`}>{children}
-      
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <Button raised>← Back to home</Button>
-          </Link>
-        </div>
-      )}
+      <main
+        className={`${
+          !home ? styles.postContent + " " + utilStyles.bodyText : ""
+        }`}
+      >
+        {children}
+
+        {!home && (
+          <div className={styles.backToHome}>
+            <Link href="/">
+              <Button raised>← Back to home</Button>
+            </Link>
+          </div>
+        )}
       </main>
     </div>
   );

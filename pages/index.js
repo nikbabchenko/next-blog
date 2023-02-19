@@ -3,6 +3,7 @@ import { Layout, siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import { NewsItem } from "../components/news";
+
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
@@ -25,11 +26,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p className={utilStyles.headerDescription}>
-          Software engineer at{" "}
-          <a href="https://www.lohika.com.ua/" target="_blank">
-            Lohika Altran Group
-          </a> 🐱‍💻
-          . Fan of writing readable code. Angular Ninja 🏂. PS gamer. 🎮.
+          Software engineer from Ukraine 🇺🇦. <br /> Fan of writing readable code. Angular Ninja 🥷. <br />
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
