@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import DarkModeToggle from "react-dark-mode-toggle";
+import {isBrowser} from '../utils';
  
 export const DarkModeToggler = () => {
   const addThemeBodyClass = (isDark) => {
-    if (process.browser) {
+    if (isBrowser()) {
       const hasDarkClass = document.documentElement.classList.contains('is-dark');
 
       if (hasDarkClass) {
@@ -16,7 +17,7 @@ export const DarkModeToggler = () => {
   };
 
   const getDefaultValue = () => {
-    if (process.browser) {
+    if (isBrowser()) {
       const isDark = localStorage.getItem('isDarkMode') === 'true';
       addThemeBodyClass(isDark);
       return isDark || false;

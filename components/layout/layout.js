@@ -7,6 +7,7 @@ import { Button } from "@rmwc/button";
 
 const name = "Nick Babchenko";
 export const siteTitle = `Web dev's blog`;
+
 const formatToInitials = (name) =>
   name
     .split(" ")
