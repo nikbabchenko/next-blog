@@ -18,7 +18,7 @@ export const DarkModeToggler = () => {
 
   const getDefaultValue = () => {
     if (isBrowser()) {
-      const isDark = localStorage.getItem('isDarkMode') === 'true';
+      const isDark = localStorage.getItem('isDarkMode') === 'true' || !localStorage.getItem('isDarkMode');
       addThemeBodyClass(isDark);
       return isDark || false;
     }
