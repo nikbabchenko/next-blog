@@ -1,15 +1,18 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;600&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,900;1,600&display=swap');
 
 :root {
-  --mdc-theme-primary: #1976d2;
+  --mdc-theme-primary: #da4893;
   --mdc-theme-secondary: #d81b60;
+  --mdc-theme-background: rgb(255, 255, 255, 0.96); 
+  --border-color: rgb(0, 0, 0, 0.1); 
 }
 
 :root.is-dark {
-  --mdc-theme-primary: #1e88e5;
+  --mdc-theme-primary: #da4893;
   --mdc-theme-secondary: rgb(59, 60, 61);
 
-  --mdc-theme-background: #0e0e0e; 
+  --mdc-theme-background: rgb(6, 11, 25); 
   --mdc-theme-surface: #1c1a29;
   --mdc-theme-error: #b00020;
   --mdc-theme-on-primary:  #2c2c2c;
@@ -31,13 +34,14 @@
   --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
+  --border-color: rgb(255, 255, 255, 0.1); 
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
   line-height: 1.6;

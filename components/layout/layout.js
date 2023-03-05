@@ -1,12 +1,16 @@
 import Head from "next/head";
-import styles from "./layout.module.css";
-import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
+import utilStyles from "../../styles/utils.module.css";
 import DarkModeToggler from "../dark-mode-toggler";
+import styles from "./layout.module.css";
+import { siteTitle } from "./constants";
+
+
 import { Button } from "@rmwc/button";
+import { HomeLayout } from "./home-layout";
 
 const name = "Nick Babchenko";
-export const siteTitle = `Web dev's blog`;
+
 
 const formatToInitials = (name) =>
   name
@@ -14,9 +18,39 @@ const formatToInitials = (name) =>
     .map((item) => item[0])
     .join("");
 
+const ArticleLayout = (children) => (
+  <div className={`${styles.container}`}>
+    <header className={styles.header}>
+      <div>
+        <Link className={styles.profileInnerImage} href="/">
+          <img
+            src="/images/profile.jpg"
+            className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+            alt={name}
+          />
+          <span>{formatToInitials(name)}</span>
+        </Link>
+      </div>
+
+      <div className={styles.toggler}>
+        <DarkModeToggler />
+      </div>
+    </header>
+    <main className={styles.postContent + " " + utilStyles.bodyText}>
+      {children}
+
+      <div className={styles.backToHome}>
+        <Link href="/">
+          <Button raised>← Back to home</Button>
+        </Link>
+      </div>
+    </main>
+  </div>
+);
+
 export default function Layout({ children, home }) {
   return (
-    <div className={`${styles.container}`}>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Web developer's blog" />
@@ -29,48 +63,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <div>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </div>
-        ) : (
-          <div>
-            <Link className={styles.profileInnerImage} href="/">
-              <img
-                src="/images/profile.jpg"
-                className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                alt={name}
-              />
-              <span>{formatToInitials(name)}</span>
-            </Link>
-          </div>
-        )}
-
-        <div className={styles.toggler}>
-          <DarkModeToggler />
-        </div>
-      </header>
-      <main
-        className={`${
-          !home ? styles.postContent + " " + utilStyles.bodyText : ""
-        }`}
-      >
-        {children}
-
-        {!home && (
-          <div className={styles.backToHome}>
-            <Link href="/">
-              <Button raised>← Back to home</Button>
-            </Link>
-          </div>
-        )}
-      </main>
-    </div>
+      {home ? HomeLayout(children) : ArticleLayout(children)}
+    </>
   );
 }

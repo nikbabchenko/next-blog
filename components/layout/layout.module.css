@@ -11,27 +11,22 @@
   width: 100%;
 }
 
-
 .header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding-top: 1rem;
-  /* position: sticky; */
-  /* left: 0;
-  right: 0;
-  top: 0; */
+}
+
+.logoLayout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .headerImage {
   width: 3rem;
   height: 3rem;
-  margin-right: 1rem;
-}
-
-.headerHomeImage {
-  width: 5rem;
-  height: 5rem;
   margin-right: 1rem;
 }
 

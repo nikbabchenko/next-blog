@@ -26,7 +26,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p className={utilStyles.headerDescription}>
-          Software engineer from Ukraine 🇺🇦. <br /> Fan of writing readable code. Angular Ninja 🥷. <br />
+          Software engineer from Ukraine 🇺🇦 <br /> Fan of writing readable code. Angular Ninja 🥷 <br />
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>

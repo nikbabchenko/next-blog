@@ -32,7 +32,7 @@ export const DarkModeToggler = () => {
     <DarkModeToggle
       speed={5}
       onChange={val => {
-        if (process.browser) {
+        if (isBrowser()) {
           localStorage.setItem('isDarkMode', val);
           addThemeBodyClass(val);
         }
