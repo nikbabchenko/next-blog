@@ -16,6 +16,13 @@
   grid-template-rows: 1.8fr 1.2fr;
 }
 
+@media (max-width: 900px) {
+  .article {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
 .articleSection {
   height: 100%;
 }

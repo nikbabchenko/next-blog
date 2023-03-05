@@ -1,21 +1,21 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;600&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,900;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,900;1,600&display=swap");
 
 :root {
   --mdc-theme-primary: #da4893;
   --mdc-theme-secondary: #d81b60;
-  --mdc-theme-background: rgb(255, 255, 255, 0.96); 
-  --border-color: rgb(0, 0, 0, 0.1); 
+  --mdc-theme-background: rgb(255, 255, 255, 0.96);
+  --border-color: rgb(0, 0, 0, 0.1);
 }
 
 :root.is-dark {
   --mdc-theme-primary: #da4893;
   --mdc-theme-secondary: rgb(59, 60, 61);
 
-  --mdc-theme-background: rgb(6, 11, 25); 
+  --mdc-theme-background: rgb(6, 11, 25);
   --mdc-theme-surface: #1c1a29;
   --mdc-theme-error: #b00020;
-  --mdc-theme-on-primary:  #2c2c2c;
+  --mdc-theme-on-primary: #2c2c2c;
   --mdc-theme-on-secondary: #2c2c2c;
   --mdc-theme-on-surface: #fff;
   --mdc-theme-on-error: #fff;
@@ -25,7 +25,7 @@
   --mdc-theme-text-disabled-on-background: #fff;
   --mdc-theme-text-icon-on-background: #fff;
   --mdc-theme-text-primary-on-light: #fff;
-  --mdc-theme-text-secondary-on-light:#fff;
+  --mdc-theme-text-secondary-on-light: #fff;
   --mdc-theme-text-hint-on-light: #fff;
   --mdc-theme-text-disabled-on-light: #fff;
   --mdc-theme-text-icon-on-light: #fff;
@@ -34,22 +34,21 @@
   --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
-  --border-color: rgb(255, 255, 255, 0.1); 
+  --border-color: rgb(255, 255, 255, 0.1);
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 16px;
   background-color: var(--mdc-theme-background);
   color: var(--mdc-theme-text-primary-on-background);
 
-  transition: color ease-in-out .3s, background-color ease-in-out .3s;
+  transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
 }
 
 * {
@@ -90,7 +89,6 @@ pre {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-
 .responsive-image--centered {
   width: auto;
   max-width: 100%;
@@ -106,6 +104,18 @@ pre {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 12px;
+  }
 }
