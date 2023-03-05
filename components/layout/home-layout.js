@@ -1,13 +1,12 @@
 import {
-  faAngular, faCss3, faGithub, faHtml5, faInstagram, faLinkedin, faNodeJs, faReact
+  faAngular, faCss3, faHtml5, faNodeJs, faReact
 } from "@fortawesome/free-brands-svg-icons";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Player } from "@lottiefiles/react-lottie-player";
 import cn from "classnames";
 import Head from "next/head";
 import Link from "next/link";
-import DarkModeToggler from "../dark-mode-toggler";
+import { Navbar } from "../shared";
 import { siteTitle } from "./constants";
 import devAnimation from "./dev-animation.json";
 import styles from "./home-layout.module.css";
@@ -28,41 +27,7 @@ export const HomeLayout = (children) => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={styles.home}>
-        <nav className={styles.navBar}>
-          <div className={cn(styles.logoSection, styles.navSection)}>
-            <Link className={styles.logoLink} href="/">
-              <FontAwesomeIcon className={styles.logo} icon={faCode} />
-            </Link>
-          </div>
-          <div className={cn(styles.linksSection, styles.navSection)}>
-            <Link className={styles.blogLink} href="/posts">
-              Blog
-            </Link>
-            <Link className={styles.blogLink} href="/about">
-              About
-            </Link>
-          </div>
-          <div className={cn(styles.navSection, styles.socialLinks)}>
-            <Link href="#">
-              <FontAwesomeIcon
-                className={styles.socialLink}
-                icon={faLinkedin}
-              />
-            </Link>
-            <Link href="#">
-              <FontAwesomeIcon
-                className={styles.socialLink}
-                icon={faInstagram}
-              />
-            </Link>
-            <Link href="#">
-              <FontAwesomeIcon className={styles.socialLink} icon={faGithub} />
-            </Link>
-          </div>
-          <div className={cn(styles.navSection, styles.contactLinkSection)}>
-            <DarkModeToggler />
-          </div>
-        </nav>
+        <Navbar />
         <main className={styles.main}>
           <article className={styles.article}>
             <div

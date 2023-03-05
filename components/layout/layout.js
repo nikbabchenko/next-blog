@@ -1,44 +1,25 @@
 import Head from "next/head";
 import Link from "next/link";
 import utilStyles from "../../styles/utils.module.css";
-import DarkModeToggler from "../dark-mode-toggler";
-import styles from "./layout.module.css";
 import { siteTitle } from "./constants";
-
+import styles from "./layout.module.css";
 
 import { Button } from "@rmwc/button";
+import classNames from "classnames";
+import { Navbar } from "../shared";
 import { HomeLayout } from "./home-layout";
 
-const name = "Nick Babchenko";
-
-
-const formatToInitials = (name) =>
-  name
-    .split(" ")
-    .map((item) => item[0])
-    .join("");
 
 const ArticleLayout = (children) => (
-  <div className={`${styles.container}`}>
-    <header className={styles.header}>
-      <div>
-        <Link className={styles.profileInnerImage} href="/">
-          <img
-            src="/images/profile.jpg"
-            className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-            alt={name}
-          />
-          <span>{formatToInitials(name)}</span>
-        </Link>
-      </div>
-
-      <div className={styles.toggler}>
-        <DarkModeToggler />
-      </div>
-    </header>
-    <main className={styles.postContent + " " + utilStyles.bodyText}>
+  <div>
+    <Navbar />
+    <main
+      className={classNames(
+        utilStyles.bodyText,
+        styles.container
+      )}
+    >
       {children}
-
       <div className={styles.backToHome}>
         <Link href="/">
           <Button raised>← Back to home</Button>
