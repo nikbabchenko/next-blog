@@ -94,4 +94,8 @@
   .articleTitle, .articleBlogLink {
     font-size: 2rem;
   }
+
+  .devAnimation {
+    padding: 0.2rem;
+  }
 }
